@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Enter a task..." />
+            <button type="submit">Add</button>
+        </form>
+        <div id="task-list"></div>
+        <div class="filter-buttons">
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+            <button id="filter-all">All</button>
+	    <button id="clear-all">Clear All</button>
+        </div>
+    </div>
+    <script src="dist/script.js"></script> <!-- Adjust the path to the transpiled script.js file -->
+</body>
+</html>
+

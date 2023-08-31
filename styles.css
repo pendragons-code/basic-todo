@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #363d45;
+    text-align: center;
+}
+
+h1 {
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+.task-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #40474d;
+    color: #ffffff;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #61dafb;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #4fa3d1;
+}
+
+.filter-buttons {
+    margin-top: 15px;
+}
+
+.filter-buttons button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #61dafb;
+    border: 1px solid #61dafb;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.filter-buttons button:hover {
+    background-color: #61dafb;
+    color: #ffffff;
+}
+
+.no-tasks {
+    margin-top: 10px; /* Added margin to separate the message */
+    color: #ccc;
+}
+
+.task-list {
+    margin-top: 10px; /* Added margin to separate task list from input */
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #40474d;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.task:hover {
+    background-color: #50565c;
+}
+
+.task-button {
+    margin-right: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #61dafb;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: #e57373;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    color: #f44336;
+}
+
