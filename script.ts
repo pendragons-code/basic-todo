@@ -82,7 +82,7 @@ function renderTasks(filteredTasks: Task[] = tasks) {
                     ${task.completed ? '✓' : ' '}
                 </button>
                 <span class="${task.completed ? 'completed' : ''}">${task.taskName}</span>
-                <button class="delete-button" data-index="${index}">Delete</button>
+                <button class="delete-button" data-index="${index}">Update</button>
             `;
             taskList.appendChild(taskElement);
         });
