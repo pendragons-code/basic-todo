@@ -37,7 +37,7 @@ taskList.addEventListener('click', (event) => {
     const clickedTaskIndex = parseInt(target.dataset.index);
 
     if (!isNaN(clickedTaskIndex)) {
-        if (target.classList.contains('task-button')) {
+        if (target.classList.contains('update-button')) {
             tasks[clickedTaskIndex].completed = !tasks[clickedTaskIndex].completed;
             saveTasksToLocalStorage();
             renderTasks();
@@ -47,11 +47,6 @@ taskList.addEventListener('click', (event) => {
             renderTasks();
         } else if (target.classList.contains('edit-button')) {
             const newTaskName = prompt('Enter the new task name:', tasks[clickedTaskIndex].taskName);
-            if (newTaskName !== null) {
-                editTask(clickedTaskIndex, newTaskName);
-            }
-        } else if (target.classList.contains('update-button')) {
-            const newTaskName = prompt('Enter the updated task name:', tasks[clickedTaskIndex].taskName);
             if (newTaskName !== null) {
                 editTask(clickedTaskIndex, newTaskName);
             }
