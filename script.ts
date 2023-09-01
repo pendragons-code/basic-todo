@@ -9,7 +9,7 @@ const taskList = document.getElementById('task-list') as HTMLDivElement;
 const filterAllButton = document.getElementById('filter-all') as HTMLButtonElement;
 const filterActiveButton = document.getElementById('filter-active') as HTMLButtonElement;
 const filterCompletedButton = document.getElementById('filter-completed') as HTMLButtonElement;
-const clearAllButton = document.getElementById('clear-all') as HTMLButtonElement; // New button
+const clearAllButton = document.getElementById('clear-all') as HTMLButtonElement;
 
 let tasks: Task[] = [];
 
@@ -33,11 +33,29 @@ taskForm.addEventListener('submit', (event) => {
 });
 
 taskList.addEventListener('click', (event) => {
-    const clickedTaskIndex = parseInt((event.target as HTMLButtonElement).dataset.index);
+    const target = event.target as HTMLButtonElement;
+    const clickedTaskIndex = parseInt(target.dataset.index);
+
     if (!isNaN(clickedTaskIndex)) {
-        tasks[clickedTaskIndex].completed = !tasks[clickedTaskIndex].completed;
-        saveTasksToLocalStorage();
-        renderTasks();
+        if (target.classList.contains('task-button')) {
+            tasks[clickedTaskIndex].completed = !tasks[clickedTaskIndex].completed;
+            saveTasksToLocalStorage();
+            renderTasks();
+        } else if (target.classList.contains('delete-button')) {
+            tasks.splice(clickedTaskIndex, 1);
+            saveTasksToLocalStorage();
+            renderTasks();
+        } else if (target.classList.contains('edit-button')) {
+            const newTaskName = prompt('Enter the new task name:', tasks[clickedTaskIndex].taskName);
+            if (newTaskName !== null) {
+                editTask(clickedTaskIndex, newTaskName);
+            }
+        } else if (target.classList.contains('update-button')) {
+            const newTaskName = prompt('Enter the updated task name:', tasks[clickedTaskIndex].taskName);
+            if (newTaskName !== null) {
+                editTask(clickedTaskIndex, newTaskName);
+            }
+        }
     }
 });
 
@@ -56,10 +74,16 @@ filterCompletedButton.addEventListener('click', () => {
 });
 
 clearAllButton.addEventListener('click', () => {
-    tasks = []; // Clear the tasks array
+    tasks = [];
     saveTasksToLocalStorage();
     renderTasks();
 });
+
+function editTask(index: number, newTaskName: string) {
+    tasks[index].taskName = newTaskName;
+    saveTasksToLocalStorage();
+    renderTasks();
+}
 
 function saveTasksToLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -78,11 +102,10 @@ function renderTasks(filteredTasks: Task[] = tasks) {
             const taskElement = document.createElement('div');
             taskElement.classList.add('task');
             taskElement.innerHTML = `
-                <button class="task-button" data-index="${index}">
-                    ${task.completed ? '✓' : ' '}
-                </button>
                 <span class="${task.completed ? 'completed' : ''}">${task.taskName}</span>
-                <button class="delete-button" data-index="${index}">Update</button>
+                <button class="delete-button" data-index="${index}">Delete</button>
+                <button class="update-button" data-index="${index}">Update</button>
+                <button class="edit-button" data-index="${index}">Edit</button>
             `;
             taskList.appendChild(taskElement);
         });
