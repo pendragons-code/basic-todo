@@ -1,0 +1,162 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #282c34;
+	color: #ffffff;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	max-width: 600px;
+	width: 100%;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	background-color: #363d45;
+	text-align: center;
+}
+
+h1 {
+	color: #61dafb;
+	margin-bottom: 20px;
+}
+
+.task-input-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#task-input {
+	flex: 1;
+	padding: 10px;
+	margin-right: 10px;
+	margin-left: 5px;
+	border: none;
+	border-radius: 3px;
+	background-color: #40474d;
+	color: #ffffff;
+}
+
+button {
+	padding: 8px 12px;
+	background-color: #61dafb;
+	color: #ffffff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+	background-color: #4fa3d1;
+}
+
+.filter-buttons {
+	margin-top: 15px;
+}
+
+.filter-buttons button {
+	margin: 0 5px;
+	padding: 8px 16px;
+	background-color: transparent;
+	color: #61dafb;
+	border: 1px solid #61dafb;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.filter-buttons button:hover {
+	background-color: #61dafb;
+	color: #ffffff;
+}
+
+.no-tasks {
+	margin-top: 10px;
+	color: #ccc;
+}
+
+.task-list {
+	margin-top: 10px;
+}
+
+.task {
+	min-height: 30px;
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+	padding: 5%;
+	background-color: #40474d;
+	border-radius: 3px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.edit-button {
+	background-color: transparent;
+	border: none;
+	color: #61dafb;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+
+.edit-button:hover {
+	color: #4fa3d1;
+}
+
+span {
+	position: absolute;
+	width: 200px;
+	overflow: auto;
+}
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+.delete-button {
+	margin-left: 390px;
+	background-color: transparent;
+	border: none;
+	color: #e57373;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+	background-color: #FFA8B5;
+	color: #e57373;
+}
+
+.update-button {
+	background-color: transparent;
+	border: none;
+	color: #61dafb;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
+
+.update-button:hover {
+	color: #61dafb;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #848787;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #61dafb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #14c9fa;
+}

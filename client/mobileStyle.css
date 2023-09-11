@@ -1,0 +1,14 @@
+span {
+	position: absolute;
+	width: 100px;
+	overflow: auto;
+}
+
+.delete-button {
+	margin-left: 170px;
+	background-color: transparent;
+	border: none;
+	color: #e57373;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out;
+}
