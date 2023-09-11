@@ -1,0 +1,32 @@
+{
+	"name": "todo",
+	"version": "1.0.0",
+	"description": "A simple todo list app!",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"devDependencies": {
+		"electron": "^26.2.0",
+		"electron-builder": "^24.6.4"
+	},
+	"homepage": "https://mipan.site",
+	"author": {
+		"name": "pendragonscode"
+	},
+	"build": {
+		"icon": "build/icon.ico",
+		"appId": "com.todo.app",
+		"productName": "todo",
+		"directories": {
+			"output": "dist"
+		},
+		"linux": {
+			"icon": "build/256x256.png",
+			"target": "AppImage"
+		},
+		"win": {
+			"target": "nsis"
+		}
+	}
+}

@@ -24,6 +24,10 @@ h1 {
 	margin-bottom: 20px;
 }
 
+a {
+	color: #61dafb;
+}
+
 .task-input-container {
 	display: flex;
 	justify-content: center;

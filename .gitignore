@@ -1,3 +1,4 @@
 script.ts
 tsconfig.json
 .eslintrc.js
+node_modules
