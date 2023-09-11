@@ -1,17 +1,13 @@
 # this project
+This project is a really simple and does not really have a lot of advanced features. This was made just as a test to see how I fair with electron since I have not been writing a lot of code as of late. Anyways here is a simple-to-use, minimalistic and feature-lacking dum dum application that I made in a few hours.
 
-this is a really basic project that is pretty much a todo list tracker, i made this in a dotfile on my local machine so i can just pin it to my bar and have a basic todo thing.
-
-# details
-not really well made a just thrown together, not a lot of changes will be made i guess
-
+# set up
 ```
-npm i typescript --save-dev
-tsc
+git clone <repo url here>
+npm i
+build
 ```
 
-# linting
-i made some of this on my friends pc and they had a config that used 4 spaces and single quotes, so yes this is not my usual formatting.                    
-
-# use it here!
-[todo-list](https://mipan.site) uses local storageon the browser, which is not the most secure thing in the world. Anyways im hosting this on an express server instance.
+# credits
+[logo](https://www.instagram.com/imnot_eliana/)                 
+Thank you gio!!! Thanks for being extra slay and designing this logo. Frankly speaking, this logo is so over the top the application is the bottleneck XD.

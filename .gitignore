@@ -1,4 +1,5 @@
 script.ts
 tsconfig.json
 .eslintrc.js
+dist
 node_modules
