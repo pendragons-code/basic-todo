@@ -12,7 +12,8 @@
 	},
 	"homepage": "https://mipan.site",
 	"author": {
-		"name": "pendragonscode"
+		"name": "pendragonscode",
+		"email": "notavailable@example.com"
 	},
 	"build": {
 		"icon": "build/icon.ico",
@@ -23,7 +24,7 @@
 		},
 		"linux": {
 			"icon": "build/256x256.png",
-			"target": "AppImage"
+			"target": ["AppImage", "tar.gz", "deb", "rpm", "snap"]
 		},
 		"win": {
 			"target": "nsis"
