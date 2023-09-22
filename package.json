@@ -8,7 +8,8 @@
 	},
 	"devDependencies": {
 		"electron": "^26.2.0",
-		"electron-builder": "^24.6.4"
+		"electron-builder": "^24.6.4",
+		"eslint": "^8.49.0"
 	},
 	"homepage": "https://mipan.site",
 	"author": {
@@ -24,7 +25,13 @@
 		},
 		"linux": {
 			"icon": "build/256x256.png",
-			"target": ["AppImage", "tar.gz", "deb", "rpm", "snap"]
+			"target": [
+				"AppImage",
+				"tar.gz",
+				"deb",
+				"rpm",
+				"snap"
+			]
 		},
 		"win": {
 			"target": "nsis"
