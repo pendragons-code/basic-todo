@@ -1,11 +1,15 @@
 span {
 	position: absolute;
-	width: 100px;
+	width: 80px;
+	overflow: auto;
+}
+
+.task {
 	overflow: auto;
 }
 
 .delete-button {
-	margin-left: 110px;
+	margin-left: 50px;
 	background-color: transparent;
 	border: none;
 	color: #e57373;

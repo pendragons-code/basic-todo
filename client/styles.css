@@ -115,6 +115,7 @@ button:hover {
 span {
 	position: absolute;
 	width: 200px;
+	max-height: 75px;
 	overflow: auto;
 }
 
