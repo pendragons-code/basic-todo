@@ -4,7 +4,8 @@
 	"description": "A simple todo list app!",
 	"main": "main.js",
 	"scripts": {
-		"start": "electron ."
+		"start": "electron .",
+		"build": "electron-builder -wl"
 	},
 	"devDependencies": {
 		"electron": "^26.2.0",
