@@ -44,6 +44,7 @@ a {
 	border-radius: 3px;
 	background-color: #40474d;
 	color: #ffffff;
+	overflow: auto;
 }
 
 button {
@@ -91,6 +92,7 @@ button:hover {
 
 .task {
 	min-height: 30px;
+	max-width: 700px ;
 	display: flex;
 	align-items: center;
 	margin: 10px 0;
@@ -117,6 +119,11 @@ span {
 	width: 200px;
 	max-height: 75px;
 	overflow: auto;
+}
+
+.task-input {
+	width: 70px;
+	padding: 0;
 }
 
 .completed {
@@ -149,6 +156,7 @@ span {
 .update-button:hover {
 	color: #61dafb;
 }
+
 
 ::-webkit-scrollbar {
 	width: 10px;

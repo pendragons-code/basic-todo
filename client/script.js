@@ -27,6 +27,7 @@ taskList.addEventListener("click", (event) => {
 	const target = event.target
 	const clickedTaskIndex = parseInt(target.dataset.index)
 	if (!isNaN(clickedTaskIndex)) {
+		// normally i would use something else, but since there are only 3 ill use if else
 		if (target.classList.contains("update-button")) {
 			tasks[clickedTaskIndex].completed = !tasks[clickedTaskIndex].completed
 			saveTasksToLocalStorage()
@@ -38,10 +39,24 @@ taskList.addEventListener("click", (event) => {
 			renderTasks()
 		}
 		else if (target.classList.contains("edit-button")) {
-			const newTaskName = prompt("Enter the new task name:", tasks[clickedTaskIndex].taskName)
-			if (newTaskName !== null) {
-				editTask(clickedTaskIndex, newTaskName)
+			const taskElement = target.parentElement
+			const taskNameElement = taskElement.querySelector("span");
+			let inputFieldCheck = taskNameElement.querySelector(".edit-input")
+			if (inputFieldCheck) {
+				const newTaskName = inputFieldCheck.value.trim()
+				if (newTaskName !== "") return editTask(clickedTaskIndex, newTaskName);
 			}
+			let inputField = document.createElement("input")
+			inputField.value = taskNameElement.textContent
+			inputField.className = "edit-input"
+			taskNameElement.textContent = ""
+			taskNameElement.appendChild(inputField)
+			inputField.addEventListener("keydown", (event) => {
+				if (event.key === "Enter") {
+					const newTaskName = inputField.value.trim()
+					if (newTaskName !== "") editTask(clickedTaskIndex, newTaskName)
+				}
+			})
 		}
 	}
 })
